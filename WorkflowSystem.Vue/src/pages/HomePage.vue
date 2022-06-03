@@ -2,7 +2,7 @@
   <div class="home-background">
     <div class="main-text">
       <div class="glass">
-        <h3 class="mb-4">Dołącz do WorkFlow</h3>
+        <h3 class="mb-4 header">Dołącz do WorkFlow</h3>
         <div class="row">
           <div class="col mt-2">
             <DxButton
@@ -38,3 +38,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.header {
+  color: whitesmoke;
+  font-size: 1.6rem;
+}
+</style>

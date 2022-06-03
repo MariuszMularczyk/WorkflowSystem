@@ -5,7 +5,7 @@ import store from "./store/index";
 import Toast, { POSITION } from "vue-toastification";
 import "vue-toastification/dist/index.css";
 import "devextreme/dist/css/dx.common.css";
-import "devextreme/dist/css/dx.material.teal.dark.compact.css";
+import "devextreme/dist/css/dx.greenmist.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "./assets/styles.css";

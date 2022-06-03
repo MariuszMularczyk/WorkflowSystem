@@ -52,21 +52,21 @@
             @click="onUserBan({ data })"
             title="Zablokuj użytkownika"
             v-if="data.data.isActive"
-            ><i class="fas fa-lock"></i
+            ><i class="fas fa-lock grid-icon"></i
           ></span>
           <span
             class="action"
             @click="onUserUnban({ data })"
             title="Odblokuj użytkownika"
             v-else
-            ><i class="fas fa-unlock"></i
+            ><i class="fas fa-unlock grid-icon"></i
           ></span>
           <a
             :href="getUserMail({ data })"
             class="action"
             title="Napisz wiadomość mailową"
             v-if="data.data.email"
-            ><i class="fas fa-envelope ml-2"></i
+            ><i class="fas fa-envelope ml-2 grid-icon"></i
           ></a>
         </div>
       </template>

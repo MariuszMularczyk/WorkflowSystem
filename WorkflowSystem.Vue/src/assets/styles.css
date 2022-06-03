@@ -11,11 +11,11 @@ html {
 }
 
 .header-font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main-color {
-  color: #009385;
+  color: #3cbab2;
 }
 
 .yellow-color {
@@ -28,19 +28,21 @@ html {
 
 body {
   margin: 0;
-  background-color: #181818;
+  background-color: whitesmoke;
   color: whitesmoke;
 }
 
 h3 {
   font-size: 140%;
   margin-bottom: 2vh;
+  color: #363640;
 }
 
 h4 {
   font-size: 120%;
   margin-top: 1vh;
   font-weight: normal;
+  color: #363640;
 }
 
 .home-background {
@@ -63,13 +65,13 @@ h4 {
 }
 
 @media only screen and (max-width: 940px) {
- .main-text {
-   width: 90vw;
- }
+  .main-text {
+    width: 90vw;
+  }
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, .1);  
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
   padding: 5.5rem;
   border-radius: 10px;
@@ -81,7 +83,7 @@ a {
 }
 
 a:hover {
-  color: #009385;
+  color: #3cbab2;
 }
 
 .big-data-grid {
@@ -93,7 +95,7 @@ a:hover {
   width: 80%;
 }
 .popover-container {
-  margin: .5rem auto 1rem auto;
+  margin: 0.5rem auto 1rem auto;
   width: 100%;
 }
 
@@ -104,6 +106,10 @@ a:hover {
 
 .dx-field-label {
   padding-top: 5px;
+}
+
+label {
+  color: #363640;
 }
 
 .line {
@@ -123,29 +129,37 @@ a:hover {
 }
 
 .avatar:hover {
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   padding: 2px;
   cursor: pointer;
 }
 
 .primary-border {
-  background-color: #2F363C;
+  background-color: #d7d7d7;
   padding: 8px 14px;
   margin: 2vh 0 1vh 0;
   border-radius: 10px;
 }
 
 .secondary-border {
-  background-color: rgba(54, 54, 64, 0.6);
+  background-color: #afaeae;
   padding: 8px 14px;
   margin: 2vh 0 1vh 0;
   border-radius: 10px;
 }
 
 .secondary-border2 {
-    background-color: rgba(220, 54, 64, 0.5);
-    padding: 8px 14px;
-    margin: 2vh 0 1vh 0;
-    border-radius: 10px;
-    font-size: 125%;
+  background-color: rgba(220, 54, 64, 0.5);
+  padding: 8px 14px;
+  margin: 2vh 0 1vh 0;
+  border-radius: 10px;
+  font-size: 125%;
+}
+
+.grid-icon {
+  color: #adadad;
+}
+
+.grid-icon:hover {
+  color: #3cbab2;
 }
