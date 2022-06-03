@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowSystem.Dictionaries\WorkflowSystem.Dictionaries.csproj" />
+    <ProjectReference Include="..\WorkflowSystem.Domain.Core\WorkflowSystem.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>

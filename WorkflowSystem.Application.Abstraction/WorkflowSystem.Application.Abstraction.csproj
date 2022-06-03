@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowSystem.Data.Abstraction\WorkflowSystem.Data.Abstraction.csproj" />
+    <ProjectReference Include="..\WorkflowSystem.Dictionaries\WorkflowSystem.Dictionaries.csproj" />
+    <ProjectReference Include="..\WorkflowSystem.Domain\WorkflowSystem.Domain.csproj" />
+    <ProjectReference Include="..\WorkflowSystem.Infrastructure\WorkflowSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\WorkflowSystem.Resources\WorkflowSystem.Resources.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+graph TD
+    A(Rejestracja) -->|Zarejestruj| B(Weryfikacja)
+    A -->|Zamknij| Z(Zamknięte)
+    B --> |Przekaż do akceptacji|C{Węzeł}
+    C --> D(Akceptacja kierownika)
+    D --> |Akceptuj|E(Akceptacja managera)
+    E --> |Akceptuj|F(Akceptacja zarządu)
+    C --> E
+    C --> F
+    F --> |Akceptuj|G(Zaakceptowany)
+    G --> |Odbierz|H(Odebrany)
+    D --> |Odrzuć|I(Odrzucone)
+    E --> |Odrzuć|I(Odrzucone)
+    F --> |Odrzuć|I(Odrzucone)
