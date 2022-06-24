@@ -15,7 +15,7 @@ using System.Net;
 using System.Threading.Tasks;
 using NickStats;
 using MathNet.Numerics.Statistics;
-using Accord.Statistics;
+
 namespace WorkflowSystem.Application
 {
     public class InvService : ServiceBase, IInvService

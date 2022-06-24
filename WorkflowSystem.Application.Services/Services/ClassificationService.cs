@@ -69,12 +69,12 @@ namespace WorkflowSystem.Application
             foreach (var item in list)
                 documents.AddRange(item.Positions.Select(x => new InvData() { Id = x.Id, Class = x.Class, Description = x.Descryption }));
             int clusters = documents.Max(x => x.Class);
-            if(documents.Count > 0)
+/*            if(documents.Count > 0)
             {
                 Train(documents);
-            }
-            /*Train(documents.Take(30000));
-            Evaluate(documents.TakeLast(2153));*/
+            }*/
+            Train(documents.Take(30000));
+            Evaluate(documents.TakeLast(2153));
         }
 
         private static MLContext _mlContext;
@@ -115,9 +115,12 @@ namespace WorkflowSystem.Application
         public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
         {
 
-            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.SdcaNonCalibrated("Label", "Features"))
-                    .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
- 
+            //var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features",null,0.0001f,0.0001f, 100))
+            //        .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+
+            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy("Label", "Features", null, 1.0f, 2.0f, 0.0000001f, 8, true ))
+                   .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+
             _trainedModel = trainingPipeline.Fit(trainingDataView);
            
             _predEngine = _mlContext.Model.CreatePredictionEngine<InvData, InvPrediction>(_trainedModel);
