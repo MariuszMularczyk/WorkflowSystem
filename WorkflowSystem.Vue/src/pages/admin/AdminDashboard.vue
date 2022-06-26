@@ -4,9 +4,6 @@
       <h3>
         Panel administratora
       </h3>
-      <h4 class="red-color">
-        Korzystanie z panelu zabronione dla osób nieupoważnionych!
-      </h4>
     </div>
     <div class="secondary-border">
       <h4 class="line">Funkcje administracyjne</h4>
@@ -14,21 +11,21 @@
           <div class="col-4 col-md-4 mb-3">
               <DxButton text="Zarządzanie użytkownikami"
                         @click="routerPushToUsersAdmin"
-                        type="danger"
+                        type="default"
                         width="500px"
                         height="150px" />
           </div>
           <div class="col-4 col-md-4 mb-3">
               <DxButton text="Zarządzanie grupami"
                         @click="routerPushToRolesAdmin"
-                        type="danger"
+                        type="default"
                         width="500px"
                         height="150px" />
           </div>
           <div class="col-4 col-md-4 mb-3">
               <DxButton text="Grupuj"
                         @click="cluster"
-                        type="danger"
+                        type="default"
                         width="500px"
                         height="150px" />
           </div>
