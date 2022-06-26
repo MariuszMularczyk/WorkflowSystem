@@ -7,7 +7,7 @@
       :show-close-button="false"
       :show-title="true"
       :width="650"
-      :height="580"
+      :height="630"
       container=".dx-viewport"
       :title="getTitle()"
       :shading="false"
@@ -44,6 +44,8 @@
                 :read-only="isUserSelectorReadOnly"
               />
             </div>
+          </div>
+          <div class="row mt-1">
             <div class="col">
               <label for="titleTextBox" class="form-label"
                 >Tytuł wiadomości</label
@@ -202,7 +204,7 @@ export default {
       }
       switch (this.messageType) {
         case messageTypeEnum.PRIVATE:
-          return "Wyślij wiadomość prywatną";
+          return "Wyślij wiadomość";
         
         default:
           return "";
