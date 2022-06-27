@@ -118,7 +118,7 @@ namespace WorkflowSystem.Application
             //var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Label", "Features",null,0.0001f,0.0001f, 100))
             //        .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
-            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy("Label", "Features", null, 1.0f, 2.0f, 0.0000001f, 8, true ))
+            var trainingPipeline = pipeline.Append(_mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy("Label", "Features"))
                    .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
             _trainedModel = trainingPipeline.Fit(trainingDataView);
